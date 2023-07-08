@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		144160552700BD7400559E5A /* AuthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144160542700BD7400559E5A /* AuthPresenter.swift */; };
+		1441605D2700BD9F00559E5A /* AuthInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1441605C2700BD9F00559E5A /* AuthInteractor.swift */; };
+		144160622700BDEB00559E5A /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144160612700BDEB00559E5A /* AuthCoordinator.swift */; };
+		144160672700BE0000559E5A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144160662700BE0000559E5A /* Coordinator.swift */; };
 		144E861A26F72C0100DCFB8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144E861926F72C0100DCFB8B /* AppDelegate.swift */; };
 		144E861C26F72C0100DCFB8B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144E861B26F72C0100DCFB8B /* SceneDelegate.swift */; };
 		144E862326F72C0200DCFB8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 144E862226F72C0200DCFB8B /* Assets.xcassets */; };
@@ -14,11 +18,15 @@
 		144E863126F72C0200DCFB8B /* ViperExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144E863026F72C0200DCFB8B /* ViperExampleTests.swift */; };
 		144E863C26F72C0200DCFB8B /* ViperExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144E863B26F72C0200DCFB8B /* ViperExampleUITests.swift */; };
 		144E865126F72C3000DCFB8B /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144E865026F72C3000DCFB8B /* CreateAccountView.swift */; };
-		144E865926F72C4A00DCFB8B /* CreateAccountRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144E865826F72C4A00DCFB8B /* CreateAccountRouter.swift */; };
+		144E865926F72C4A00DCFB8B /* CreateAccountCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144E865826F72C4A00DCFB8B /* CreateAccountCoordinator.swift */; };
 		144E865E26F72C7900DCFB8B /* CreateAccountInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144E865D26F72C7900DCFB8B /* CreateAccountInteractor.swift */; };
 		144E866326F72D0500DCFB8B /* CreateAccountPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144E866226F72D0500DCFB8B /* CreateAccountPresenter.swift */; };
 		144E866B26F72DF200DCFB8B /* CreateAccountEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144E866A26F72DF200DCFB8B /* CreateAccountEntity.swift */; };
+		14898B432A59653E00CE7A62 /* AuthModuleAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14898B422A59653E00CE7A62 /* AuthModuleAssembly.swift */; };
+		14898B452A59660600CE7A62 /* AppAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14898B442A59660600CE7A62 /* AppAssembly.swift */; };
 		14C1D33626F7413200EB159C /* CreateAccountAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C1D33526F7413200EB159C /* CreateAccountAssembly.swift */; };
+		14DBB09C2700E2E4002E85F2 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DBB09B2700E2E4002E85F2 /* Login.swift */; };
+		14DBB0A82700E535002E85F2 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DBB0A72700E535002E85F2 /* AuthView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +47,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		144160542700BD7400559E5A /* AuthPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPresenter.swift; sourceTree = "<group>"; };
+		1441605C2700BD9F00559E5A /* AuthInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthInteractor.swift; sourceTree = "<group>"; };
+		144160612700BDEB00559E5A /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
+		144160662700BE0000559E5A /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		144E861626F72C0100DCFB8B /* ViperExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViperExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		144E861926F72C0100DCFB8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		144E861B26F72C0100DCFB8B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,11 +64,15 @@
 		144E863B26F72C0200DCFB8B /* ViperExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperExampleUITests.swift; sourceTree = "<group>"; };
 		144E863D26F72C0200DCFB8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		144E865026F72C3000DCFB8B /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
-		144E865826F72C4A00DCFB8B /* CreateAccountRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountRouter.swift; sourceTree = "<group>"; };
+		144E865826F72C4A00DCFB8B /* CreateAccountCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountCoordinator.swift; sourceTree = "<group>"; };
 		144E865D26F72C7900DCFB8B /* CreateAccountInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountInteractor.swift; sourceTree = "<group>"; };
 		144E866226F72D0500DCFB8B /* CreateAccountPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountPresenter.swift; sourceTree = "<group>"; };
 		144E866A26F72DF200DCFB8B /* CreateAccountEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountEntity.swift; sourceTree = "<group>"; };
+		14898B422A59653E00CE7A62 /* AuthModuleAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModuleAssembly.swift; sourceTree = "<group>"; };
+		14898B442A59660600CE7A62 /* AppAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembly.swift; sourceTree = "<group>"; };
 		14C1D33526F7413200EB159C /* CreateAccountAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountAssembly.swift; sourceTree = "<group>"; };
+		14DBB09B2700E2E4002E85F2 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		14DBB0A72700E535002E85F2 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +100,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		144160502700BCC700559E5A /* AuthModule */ = {
+			isa = PBXGroup;
+			children = (
+				1447B9CA2700EE8800D1795A /* Entity */,
+				14DBB0AF2700E72F002E85F2 /* Interactor */,
+				1441606C2700BE1F00559E5A /* Presenter */,
+				14DBB0A62700E52A002E85F2 /* View */,
+				1441606B2700BE1600559E5A /* Coordinator */,
+				14898B422A59653E00CE7A62 /* AuthModuleAssembly.swift */,
+			);
+			path = AuthModule;
+			sourceTree = "<group>";
+		};
+		1441606B2700BE1600559E5A /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		1441606C2700BE1F00559E5A /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				144160542700BD7400559E5A /* AuthPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		1447B9CA2700EE8800D1795A /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				14DBB09B2700E2E4002E85F2 /* Login.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		144E860D26F72C0100DCFB8B = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +161,10 @@
 			children = (
 				144E861926F72C0100DCFB8B /* AppDelegate.swift */,
 				144E861B26F72C0100DCFB8B /* SceneDelegate.swift */,
+				144160662700BE0000559E5A /* Coordinator.swift */,
+				14898B442A59660600CE7A62 /* AppAssembly.swift */,
+				14898B412A59634500CE7A62 /* Navigation */,
+				144160502700BCC700559E5A /* AuthModule */,
 				144E864C26F72C0900DCFB8B /* CreateAccountModule */,
 				144E862226F72C0200DCFB8B /* Assets.xcassets */,
 				144E862426F72C0200DCFB8B /* LaunchScreen.storyboard */,
@@ -138,12 +194,11 @@
 		144E864C26F72C0900DCFB8B /* CreateAccountModule */ = {
 			isa = PBXGroup;
 			children = (
-				144E867226F72E2100DCFB8B /* Router */,
+				14C1D33526F7413200EB159C /* CreateAccountAssembly.swift */,
 				144E866F26F72DF600DCFB8B /* Entity */,
 				144E867326F72E2900DCFB8B /* Interactor */,
 				144E867126F72E1900DCFB8B /* Presenter */,
 				144E867026F72E1200DCFB8B /* View */,
-				14C1D33526F7413200EB159C /* CreateAccountAssembly.swift */,
 			);
 			path = CreateAccountModule;
 			sourceTree = "<group>";
@@ -172,18 +227,35 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
-		144E867226F72E2100DCFB8B /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				144E865826F72C4A00DCFB8B /* CreateAccountRouter.swift */,
-			);
-			path = Router;
-			sourceTree = "<group>";
-		};
 		144E867326F72E2900DCFB8B /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
 				144E865D26F72C7900DCFB8B /* CreateAccountInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		14898B412A59634500CE7A62 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				144160612700BDEB00559E5A /* AuthCoordinator.swift */,
+				144E865826F72C4A00DCFB8B /* CreateAccountCoordinator.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		14DBB0A62700E52A002E85F2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				14DBB0A72700E535002E85F2 /* AuthView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		14DBB0AF2700E72F002E85F2 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				1441605C2700BD9F00559E5A /* AuthInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -317,12 +389,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				144E865926F72C4A00DCFB8B /* CreateAccountRouter.swift in Sources */,
+				14DBB0A82700E535002E85F2 /* AuthView.swift in Sources */,
+				144E865926F72C4A00DCFB8B /* CreateAccountCoordinator.swift in Sources */,
 				14C1D33626F7413200EB159C /* CreateAccountAssembly.swift in Sources */,
 				144E866B26F72DF200DCFB8B /* CreateAccountEntity.swift in Sources */,
 				144E865E26F72C7900DCFB8B /* CreateAccountInteractor.swift in Sources */,
+				14898B432A59653E00CE7A62 /* AuthModuleAssembly.swift in Sources */,
+				144160552700BD7400559E5A /* AuthPresenter.swift in Sources */,
 				144E861A26F72C0100DCFB8B /* AppDelegate.swift in Sources */,
+				144160622700BDEB00559E5A /* AuthCoordinator.swift in Sources */,
+				1441605D2700BD9F00559E5A /* AuthInteractor.swift in Sources */,
+				144160672700BE0000559E5A /* Coordinator.swift in Sources */,
 				144E865126F72C3000DCFB8B /* CreateAccountView.swift in Sources */,
+				14DBB09C2700E2E4002E85F2 /* Login.swift in Sources */,
+				14898B452A59660600CE7A62 /* AppAssembly.swift in Sources */,
 				144E866326F72D0500DCFB8B /* CreateAccountPresenter.swift in Sources */,
 				144E861C26F72C0100DCFB8B /* SceneDelegate.swift in Sources */,
 			);

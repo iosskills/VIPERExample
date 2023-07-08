@@ -5,29 +5,37 @@
 //  Created by Константин Богданов on 19.09.2021.
 //
 
-import Foundation
+import UIKit
 
 protocol CreateAccountPresenterInput {
 	var output: CreateAccountPresenterOutput? { get set }
 }
 
 protocol CreateAccountPresenterOutput: AnyObject {
-
+	func openAuthScreen(withLogin login: String)
 }
 
-final class CreateAccountPresenter {
+final class CreateAccountPresenter: UIViewController, CreateAccountPresenterInput {
 	weak var output: CreateAccountPresenterOutput?
 
 	private let interactor: CreateAccountInteractorInput
-	private let router: CreateAccountRouterInput
-	private let view: CreateAccountViewInput
+	private let viewAssembly: () -> UIView & CreateAccountViewInput
+	private lazy var accountView = viewAssembly()
 
-	init(view: CreateAccountViewInput,
-		 interactor: CreateAccountInteractorInput,
-		 router: CreateAccountRouterInput) {
-		self.view = view
+	init(viewAssembly: @escaping () -> UIView & CreateAccountViewInput,
+		 interactor: CreateAccountInteractorInput) {
+		self.viewAssembly = viewAssembly
 		self.interactor = interactor
-		self.router = router
+		super.init(nibName: nil, bundle: nil)
+	}
+
+	override func loadView() {
+		view = accountView
+		accountView.output = self
+	}
+
+	required init?(coder: NSCoder) {
+		fatalError("init(coder:) has not been implemented")
 	}
 }
 
@@ -43,6 +51,6 @@ extension CreateAccountPresenter: CreateAccountInteractorOutput {
 	}
 
 	func didCreateAccount(withLogin login: String) {
-		router.openAuthScreen(withLogin: login)
+		output?.openAuthScreen(withLogin: login)
 	}
 }

@@ -15,17 +15,19 @@ protocol AuthInteractorOutput: AnyObject {
 protocol AuthInteractorInput {
 	var output: AuthInteractorOutput? { get set }
 
-	func login(withLogin login: String, password: String)
+	func login(withAccount account: Account)
 }
 
 final class AuthInteractor: AuthInteractorInput {
 	weak var output: AuthInteractorOutput?
 
-	func login(withLogin login: String, password: String) {
-		if (arc4random() % 100) < 50 {
-			output?.loggedIn()
-		} else {
-			output?.loginFailed()
+	func login(withAccount account: Account) {
+		DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [weak self] in
+			if (arc4random() % 100) < 50 {
+				self?.output?.loggedIn()
+			} else {
+				self?.output?.loginFailed()
+			}
 		}
 	}
 }

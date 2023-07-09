@@ -16,6 +16,7 @@ protocol AuthPresenterInput {
 protocol AuthPresenterOutput: AnyObject {
 	func authComplete()
 	func userEnterIncorrectData()
+	func userMovedBack()
 }
 
 final class AuthPresenter: UIViewController, AuthPresenterInput {
@@ -51,17 +52,18 @@ final class AuthPresenter: UIViewController, AuthPresenterInput {
 }
 
 extension AuthPresenter: AuthViewOutput {
-	func userMovedBack() {
-		output?.authComplete()
+	func userPressedEnter(login: String, password: String) {
+		interactor.login(withAccount: Account(login: login, password: password))
 	}
 
-	func userEnter(login: String, password: String) {
-		interactor.login(withLogin: login, password: password)
+	func userMovedBack() {
+		output?.userMovedBack()
 	}
 }
 
 extension AuthPresenter: AuthInteractorOutput {
 	func loggedIn() {
+		authView.hideLoader()
 		output?.authComplete()
 	}
 

@@ -41,16 +41,18 @@ final class CreateAccountPresenter: UIViewController, CreateAccountPresenterInpu
 
 extension CreateAccountPresenter: CreateAccountViewOutput {
 	func userSelecCreateAccount(withLogin login: String, password: String) {
+		accountView.showLoader()
 		interactor.createAccount(withLogin: login, password: password)
 	}
 }
 
 extension CreateAccountPresenter: CreateAccountInteractorOutput {
 	func didReceive(error: String) {
-
+		accountView.hideLoader()
 	}
 
 	func didCreateAccount(withLogin login: String) {
+		accountView.hideLoader()
 		output?.openAuthScreen(withLogin: login)
 	}
 }

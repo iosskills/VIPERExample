@@ -24,6 +24,7 @@
 		144E866B26F72DF200DCFB8B /* CreateAccountEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144E866A26F72DF200DCFB8B /* CreateAccountEntity.swift */; };
 		14898B432A59653E00CE7A62 /* AuthModuleAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14898B422A59653E00CE7A62 /* AuthModuleAssembly.swift */; };
 		14898B452A59660600CE7A62 /* AppAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14898B442A59660600CE7A62 /* AppAssembly.swift */; };
+		14898B482A59A5D100CE7A62 /* AlertsAsembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14898B472A59A5D100CE7A62 /* AlertsAsembly.swift */; };
 		14C1D33626F7413200EB159C /* CreateAccountAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C1D33526F7413200EB159C /* CreateAccountAssembly.swift */; };
 		14DBB09C2700E2E4002E85F2 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DBB09B2700E2E4002E85F2 /* Login.swift */; };
 		14DBB0A82700E535002E85F2 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DBB0A72700E535002E85F2 /* AuthView.swift */; };
@@ -70,6 +71,7 @@
 		144E866A26F72DF200DCFB8B /* CreateAccountEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountEntity.swift; sourceTree = "<group>"; };
 		14898B422A59653E00CE7A62 /* AuthModuleAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModuleAssembly.swift; sourceTree = "<group>"; };
 		14898B442A59660600CE7A62 /* AppAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembly.swift; sourceTree = "<group>"; };
+		14898B472A59A5D100CE7A62 /* AlertsAsembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsAsembly.swift; sourceTree = "<group>"; };
 		14C1D33526F7413200EB159C /* CreateAccountAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountAssembly.swift; sourceTree = "<group>"; };
 		14DBB09B2700E2E4002E85F2 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		14DBB0A72700E535002E85F2 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
@@ -103,21 +105,13 @@
 		144160502700BCC700559E5A /* AuthModule */ = {
 			isa = PBXGroup;
 			children = (
+				14898B422A59653E00CE7A62 /* AuthModuleAssembly.swift */,
 				1447B9CA2700EE8800D1795A /* Entity */,
 				14DBB0AF2700E72F002E85F2 /* Interactor */,
 				1441606C2700BE1F00559E5A /* Presenter */,
 				14DBB0A62700E52A002E85F2 /* View */,
-				1441606B2700BE1600559E5A /* Coordinator */,
-				14898B422A59653E00CE7A62 /* AuthModuleAssembly.swift */,
 			);
 			path = AuthModule;
-			sourceTree = "<group>";
-		};
-		1441606B2700BE1600559E5A /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		1441606C2700BE1F00559E5A /* Presenter */ = {
@@ -163,6 +157,7 @@
 				144E861B26F72C0100DCFB8B /* SceneDelegate.swift */,
 				144160662700BE0000559E5A /* Coordinator.swift */,
 				14898B442A59660600CE7A62 /* AppAssembly.swift */,
+				14898B462A59A54600CE7A62 /* Alerts */,
 				14898B412A59634500CE7A62 /* Navigation */,
 				144160502700BCC700559E5A /* AuthModule */,
 				144E864C26F72C0900DCFB8B /* CreateAccountModule */,
@@ -242,6 +237,14 @@
 				144E865826F72C4A00DCFB8B /* CreateAccountCoordinator.swift */,
 			);
 			path = Navigation;
+			sourceTree = "<group>";
+		};
+		14898B462A59A54600CE7A62 /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				14898B472A59A5D100CE7A62 /* AlertsAsembly.swift */,
+			);
+			path = Alerts;
 			sourceTree = "<group>";
 		};
 		14DBB0A62700E52A002E85F2 /* View */ = {
@@ -403,6 +406,7 @@
 				144E865126F72C3000DCFB8B /* CreateAccountView.swift in Sources */,
 				14DBB09C2700E2E4002E85F2 /* Login.swift in Sources */,
 				14898B452A59660600CE7A62 /* AppAssembly.swift in Sources */,
+				14898B482A59A5D100CE7A62 /* AlertsAsembly.swift in Sources */,
 				144E866326F72D0500DCFB8B /* CreateAccountPresenter.swift in Sources */,
 				144E861C26F72C0100DCFB8B /* SceneDelegate.swift in Sources */,
 			);

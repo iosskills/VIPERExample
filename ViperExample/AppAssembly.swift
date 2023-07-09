@@ -14,7 +14,8 @@ final class AppAssembly {
 										moduleAssembly: CreateAccountAssembly.assemble,
 										authCoordinatorAssembly: {  root in
 			return AuthCoordinator(initialController: root,
-								   authModuleAssembly: AuthModuleAssembly.assemble)
+								   authModuleAssembly: AuthModuleAssembly.assemble,
+								   alertAssembly: { AlertsAsembly.assemble(title: $0, subtitle: $1, action: $2)} )
 		})
 	}
 }

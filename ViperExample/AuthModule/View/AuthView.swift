@@ -110,7 +110,7 @@ final class AuthView: UIView, AuthViewInput {
 		backButton.setTitle("Назад", for: .normal)
 		backButton.backgroundColor = .gray
 		backButton.addTarget(self, action: #selector(backButtonPressed), for: .touchUpInside)
-		enterButton.addTarget(self, action: #selector(backButtonPressed), for: .touchUpInside)
+		enterButton.addTarget(self, action: #selector(enterButtonPressed), for: .touchUpInside)
 	}
 
 	@objc private func enterButtonPressed() {

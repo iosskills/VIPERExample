@@ -68,6 +68,7 @@ extension AuthPresenter: AuthInteractorOutput {
 	}
 
 	func loginFailed() {
+		authView.hideLoader()
 		output?.userEnterIncorrectData()
 	}
 }

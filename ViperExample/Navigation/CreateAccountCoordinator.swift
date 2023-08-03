@@ -35,7 +35,17 @@ extension CreateAccountCoordinator: CreateAccountPresenterOutput {
 	func openAuthScreen(withLogin login: String) {
 		guard let root = module else { return }
 		let coordinator = authCoordinatorAssembly(root)
-		coordinator.finishFlow = { [weak self] _ in
+		coordinator.finishFlow = { [weak self] result in
+			switch result {
+			case .failed:
+				break
+			case .loggedIn:
+				break
+			case .movedBack:
+				break
+
+			}
+
 			self?.authCoordinator = nil
 		}
 		self.authCoordinator = coordinator

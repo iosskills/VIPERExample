@@ -36,6 +36,7 @@ class AuthCoordinator: Coordinator<Login, LoginFlowResult> {
 		presenter.output = self
 		presenter.setLogin(parameter)
 		module = presenter
+		presenter.modalPresentationStyle = .fullScreen
 		initialController?.present(presenter, animated: true, completion: nil)
 	}
 }

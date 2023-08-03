@@ -75,12 +75,12 @@ final class AuthView: UIView, AuthViewInput {
 		loginLabel.setContentHuggingPriority(.defaultLow, for: .horizontal)
 		NSLayoutConstraint.activate([
 			titleLabel.bottomAnchor.constraint(equalTo: loginLabel.topAnchor, constant: -8),
-			titleLabel.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
+			titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
 
-			loginLabel.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
+			loginLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
 			loginLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
-			loginLabel.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 16),
-			loginLabel.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
+			loginLabel.leadingAnchor.constraint(greaterThanOrEqualTo: safeAreaLayoutGuide.leadingAnchor, constant: 16),
+			loginLabel.trailingAnchor.constraint(lessThanOrEqualTo: safeAreaLayoutGuide.trailingAnchor),
 			passworkField.topAnchor.constraint(equalTo: loginLabel.bottomAnchor, constant: 8),
 			passworkField.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 16),
 			passworkField.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -16),

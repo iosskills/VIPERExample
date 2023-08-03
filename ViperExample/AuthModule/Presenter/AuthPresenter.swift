@@ -53,6 +53,7 @@ final class AuthPresenter: UIViewController, AuthPresenterInput {
 
 extension AuthPresenter: AuthViewOutput {
 	func userPressedEnter(login: String, password: String) {
+		authView.showLoader()
 		interactor.login(withAccount: Account(login: login, password: password))
 	}
 
